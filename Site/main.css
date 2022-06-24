@@ -1,0 +1,62 @@
+:root{
+    --grey: #6d6d6d;
+    --white: #ffffff;
+    --dark: #2b2b2b; 
+    --black: #000000; 
+    }
+
+*{
+    color: var(--fontColor);
+    font-family: 'Verdana';
+}
+
+body {
+
+    background: var(--bg)
+    
+    
+    }
+    
+    ul {
+    
+        font-size:16px;
+        font-family: 'Trebuchet';
+    
+    }
+    p {
+        font-size: 28px;
+        font-family: 'Trebuchet';
+    }
+
+    .btn {
+        position: absolute;
+        top: 20px;
+        left: 250px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border:3px;
+        border-color: var(--btnBorder);
+        color: var(--btnFontColor);
+        background-color: var(--btnBg)
+        
+        
+        }
+        .btn:focus { outline-style:outset }
+    .light-theme {
+        --bg: var(--grey);
+        --fontColor: var(--black);
+        --btnBg: var(--black);
+        --btnFontColor: var(--white);
+        --btnBorder: var(--dark);
+    }
+    .dark-theme {
+        --bg: var(--dark);
+        --fontColor: var(--white);
+        --btnBg: var(--white);
+        --btnFontColor: var(--black);
+        --btnBorder: var(--dark);
+        
+    }
+
+
