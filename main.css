@@ -1,0 +1,173 @@
+:root{
+    --grey: #6d6d6d;
+    --greyer: #4e4e4e;
+    --light: #dadada;
+    --white: #ffffff;
+    --dark: #2b2b2b; 
+    --darker: #111111; 
+    --black: #000000; 
+    }
+
+*{
+    color: var(--fontColor);
+    font-family: 'Verdana';
+}
+
+body {
+
+    background: var(--bg)
+    
+    
+    }
+
+
+    ul {
+    
+        font-size:16px;
+        font-family: 'Trebuchet';
+        font-weight: 400;
+    
+    }
+
+    .framed {
+        border: 3px outset;  
+        border-color:      var(--fontColor);
+        border-spacing: 3px;  
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px 200px;
+        grid-auto-rows: max-content;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 800;
+
+        margin: 10px;
+        border-color: var(--btnBorder);
+
+    }
+
+    hr{
+        color: var(--sidebar-color);
+        text-shadow: 2px 2px var(--font-shadow-color);
+    }
+
+    h1 {
+        font-size: 36px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 400;
+        text-shadow: 3px 3px var(--font-shadow-color);
+    }
+
+    h2 {
+        font-size: 28px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 200;
+        text-shadow: 2px 2px var(--font-shadow-color);
+    }
+
+    p {
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 100;
+        text-shadow: 1px 1px var(--font-shadow-color);
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
+        
+        top: 0px;
+        left: 350px;
+        height: 75px;
+        width: 75px;
+        border-radius: 80%;
+        margin: 15px;
+        border:15px;
+        border-color: var(--btnBorder);
+        color: var(--btnFontColor);
+        background-color: var(--btnBg);
+             
+        }
+        .btn:hover {
+            border: var(--dark) 5px;
+            background: var(--fontColor);
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            }
+        
+        .framed:hover {
+            border: 6px outset;
+            border-color: var(--fontColor);
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9);
+        }
+        .btn:focus  { outline-style:outset }
+        .grid:focus { outline-style:outset }
+        .img:focus  { outline-style:outset }
+        
+    .light-theme {
+        --bg: var(--grey);
+        --fontColor: var(--darker);
+
+        --btnBg: var(--dark);
+        --btnFontColor: var(--white);
+        --btnBorder: var(--dark);
+        
+        --sidebar-color: var(--light);
+        --hr-color:      var(--sidebar-color);
+
+        --framedBorder: 3px outset var(--white);
+        --font-shadow-color: var(--greyer);
+    }
+    .dark-theme {
+        --bg: var(--dark);
+        --fontColor: var(--light);
+
+        --btnBg: var(--light);
+        --btnFontColor: var(--black);
+        --btnBorder: var(--dark);
+
+        --sidebar-color: var(--grey);
+        --hr-color:      var(--sidebar-color);
+        
+        --framedBorder: 3px outset var(--light);
+        --font-shadow-color: var(--sidebar-color);
+    }
+
+    .sidebar {
+        height: 1200px;
+        width: 240px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 40px;
+        background-color: var(--sidebar-color);
+        background-blend-mode:difference;
+        border: 10px inset var(--btnBg);
+        border-top: 3px inset var(--btnBg);
+        border-left: 0px;
+
+        text-shadow: 2px 2px var(--btnFontColor);
+        
+        }
+        
+        .sidebar div {
+        padding: 10px;
+        font-size: 24px;
+        line-height: 60px;
+        display: block;
+        }
+        
+        .body-text {
+        margin-right: 100px; 
+        font-size: 16px;
+        }
