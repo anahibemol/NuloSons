@@ -13,12 +13,25 @@
     font-family: 'Verdana';
 }
 
-body {
 
-    background: var(--bg)
-    
-    
+
+body {
+    background: linear-gradient(-5deg, var(--bg), var(--sidebar-color), var(--bg),var(--bg));
+    background-size: 400% 400%;
+    animation: gradient 120s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
     }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
     ul {
@@ -48,9 +61,11 @@ body {
 
     }
 
-    hr{
+    .hr-1{
         color: var(--sidebar-color);
-        text-shadow: 2px 2px var(--font-shadow-color);
+        border-top: 3px solid var(--sidebar-color);
+        border-bottom: 5px var(--greyer);
+        border-bottom-style: groove;
     }
 
     h1 {
@@ -95,6 +110,29 @@ body {
         background-color: var(--btnBg);
              
         }
+
+    .btn2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
+        
+        top: 0px;
+        left: 550px;
+        height: 75px;
+        width: 200px;
+        border-radius: 5%;
+        border-color: var(--btnBg);
+        margin: 5px;
+        border: 10px outset;
+        border-color: var(--btnBorder);
+        color: var(--btnFontColor);
+        background-color: var(--btnBg);
+             
+    }
         .btn:hover {
             border: var(--dark) 5px;
             background: var(--fontColor);
@@ -102,6 +140,14 @@ body {
             -ms-transform: scale(1.1);
             transform: scale(1.1);
             }
+
+        .btn2:hover {
+            border: var(--dark) 5px;
+            background: var(--fontColor);
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);               
+        }
         
         .framed:hover {
             border: 6px outset;
