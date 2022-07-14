@@ -12,6 +12,16 @@ template.innerHTML = `
     <!-- body content -->
     </div>
 </body>
+
+<style>       
+hr{
+    height: 3px;
+    text-shadow: 2px 2px var(--font-shadow-color);
+    border-style: dashed;
+    background-color: var(--sidebar-color);            
+    border: none;
+}
+</style>
 `;
 
 document.body.appendChild(template.content);

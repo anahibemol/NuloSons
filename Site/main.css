@@ -29,7 +29,7 @@ body {
     
     }
 
-    img {
+    .framed {
         border: 3px outset;  
         border-color:      var(--fontColor);
         border-spacing: 3px;  
@@ -83,7 +83,7 @@ body {
         font-size: large;
         font-weight: 600;
         
-        top: 20px;
+        top: 0px;
         left: 350px;
         height: 75px;
         width: 75px;
@@ -103,7 +103,7 @@ body {
             transform: scale(1.1);
             }
         
-        img:hover {
+        .framed:hover {
             border: 6px outset;
             border-color: var(--fontColor);
             -webkit-transform: scale(0.9);
@@ -125,7 +125,7 @@ body {
         --sidebar-color: var(--light);
         --hr-color:      var(--sidebar-color);
 
-        --imgBorder: 3px outset var(--white);
+        --framedBorder: 3px outset var(--white);
         --font-shadow-color: var(--greyer);
     }
     .dark-theme {
@@ -139,7 +139,7 @@ body {
         --sidebar-color: var(--grey);
         --hr-color:      var(--sidebar-color);
         
-        --imgBorder: 3px outset var(--light);
+        --framedBorder: 3px outset var(--light);
         --font-shadow-color: var(--sidebar-color);
     }
 
@@ -152,6 +152,9 @@ body {
         padding-top: 40px;
         background-color: var(--sidebar-color);
         background-blend-mode:difference;
+        border: 10px inset var(--btnBg);
+        border-top: 3px inset var(--btnBg);
+        border-left: 0px;
 
         text-shadow: 2px 2px var(--btnFontColor);
         
