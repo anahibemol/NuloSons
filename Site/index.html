@@ -4,26 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List</title>
+    <title>Sound Repository</title>
     <link rel="stylesheet" href="main.css">
+    <script src="sidebar.js" type="text/javascript" defer></script>
 </head>
 <body class = "light-theme">
-    <h1>Song List</h1>
-    <p id ="msg">Released Songs:</p>
-    <ul>
-        <li class ="list">Átrio</li>
-        <li class ="list">Tolice</li>
-        <li class ="list">Veneno</li>
-        <li class ="list">Memórias</li>
-        <li class ="list">Amor</li>
-        <li class ="list">Presto</li>
-    </ul>
+
+    <template id="sidebar"></template>
+
+
+    <style>       
+        hr{
+            height: 3px;
+            text-shadow: 2px 2px var(--font-shadow-color);
+            border-style: dashed;
+            background-color: var(--sidebar-color);            
+            border: none;
+        }
+    </style>
+
+    <h1>Sound Repository</h1>
+    <h2 id ="msg">Categories:</h2>
+    <hr>
+      
+    <div class = "grid">
+        <a href="https://youtu.be/qnpf2v0r0Ug"><img SRC=Resources/Nu-Mun.png alt="Link" width="100"><br>Nu Mun</a>
+        <i><img SRC=Resources/Classic.png width="100"> <br>Classical</i>
+        <i><img SRC=Resources/Insendium.png width="100"> <br>Insendium</i>
+        <i><img SRC=Resources/Question.png width="100"> <br>Varied</i>    
+    </div>
+    <hr>
     <p id ="msg">Finished Songs:</p>
     <ul>
         <li class ="list">Ode a Ninguém</li>
         <li class ="list">O homem que comia flores</li>
-        <li class ="list">Any Colour You Like?</li>
-    </ul>    
+        <li class ="list"><I>Any Colour You Like? <A href="https://youtu.be/6hEUWEmX_qw">Link</A></I></li>
+    </ul>
+    <hr>
+    <p id ="msg">Released Songs:</p> 
+    <ul>
+        <li class ="list"> Átrio</li>
+        <li class ="list"> Tolice</li>
+        <li class ="list"> Veneno</li>
+        <li class ="list"> Memórias</li>
+        <li class ="list"> Amor</li>
+        <li class ="list"> Presto</li>
+    </ul>
+    <hr>   
     <div>
         <button class="btn">Dark</button>
     </div>
@@ -31,6 +58,6 @@
     <noscript>You need to enable JS to view the full site</noscript>
 
 
-    
+    <IMG src="C:\Users\USUARIO\Pictures\fato.png">
 </body>
 </html>
