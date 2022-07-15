@@ -162,7 +162,6 @@ body {
              
     }
         .btn:hover {
-            border: 5px;
             background: var(--fontColor);
             background-color: var(--btnHoverColor);
 
@@ -176,18 +175,21 @@ body {
             background: var(--fontColor);
             background-color: var(--btnHoverColor);
 
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1);
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
             box-shadow: 8px 12px var(--frameShadow);           
         }
         
         .framed:hover {
             border: 6px outset;
             border-color: var(--fontColor);
-            -webkit-transform: scale(0.9);
-            -ms-transform: scale(0.9);
-            transform: scale(0.9);
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            transition: ease-in-out var(--framedDelay);
+            --framedDelay: 500ms;
+            animation-delay: var(--framedDelay);
             box-shadow: 3px 6px var(--frameShadow);
 
         }
@@ -281,7 +283,7 @@ body {
             background: var(--sidebar-color);
             font-size: 30px;
             color: lavender;
-            box-shadow: 1px 3px var(--sidebar-fontShadow);
+            box-shadow: 0px 4px var(--sidebar-fontShadow);
             height: 100%;
             transition: var(--transformStuff) 500ms;
             
@@ -289,12 +291,13 @@ body {
             background-size: cover;
             background-position: center;
             background-repeat: repeat;
-            --transformStuff: translate(-3px) scale(1.02);
+            --transformStuff: translate(-6px) scale(1.02);
         }
         
         .card:hover{
-            box-shadow: 1px 6px var(--bg);
+            box-shadow: 2px 6px var(--bg);
             transform: var(--transformStuff);
-            transition: ease-in-out 500ms;
+            transition: ease-in-out 600ms;
+            
             
         }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Repository</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="sidebar-pt.js" type="text/javascript" defer></script>
+</head>
+<body class = "light-theme">
+
+    <body>
+        <div class="sidebar">
+        <div><li><a href="index.html">Main Page</a></li></div>
+        <div><li><a href="about.html">About</a></li></div>
+        <div><li><a href="contact.html">Contact </a></li></div>
+        
+            </div>        
+            <div class="body-text">
+            <!-- body content -->
+            </div>
+    </body>
+
+    <h1>Sound Repository</h1>
+    <p>Arquivo para minhas músicas</p>
+    <hr>
+
+    <p>
+        Olá, meu nome é Davi, sou um músico e desenvolvedor brasileiro, além de um monte de outras coisas avulsas.
+        <br><br>
+         Esse site foi criado com 2 propósitos: Organizar as minhas músicas & Aprender desenvolvimento Web.
+         <br><br>
+    
+         Você pode julgar o sucesso nessa minha missão apenas por navegar pelo site, está bem na cara ― tanto que ―
+         o código-fonte do site é público e acessível <A href="https://github.com/NuloSois/SoundRepository">Aqui</A>.<br>
+
+        </p>
+
+    <hr>
+
+    <p>
+
+        Eu venho tocando Violão e compondo desde Janeiro de 2020, tendo começado a ter aulas formais com mais rigor desde<br>
+        Abril de 2022, junto com aulas de Teclado e Guitarra (que substituiu meu violão). Meus principais interesses na<br>
+        música são: Rock/Metal (e seus subgêneros), Eletrônica, Clássica (principalmente nos períodos romântico e modernista)<br>
+        e MPB/Bossa nova, entre muitos outros.<br>
+        Musica é uma das paixões da minha vida, e uma das coisas que vivo por, portanto, eu posso ficar apegado demais sobre o<br>
+        assunto às vezes.<br>
+    </p>
+
+    <p>
+
+        Eu lancei dois LPs desde 2020, o primeiro eu não me orgulho o suficiente para divulgar, mas o outro é o Nu Mun, que<br>
+        está indexado no site. Eu também tenho um monte de música ainda não lançada, seja elea em produção ou terminada, de<br>
+        Composições Clássicas à Demos de Guitarra.
+    </p>
+
+    <p>
+        Agora uma Lista do meu equipamento:
+        <li>Guitarra: Guitarra da Tagima Modificada (Provavelmente uma Stella ou TG-510).</li>
+        <li>Caixa Amplificadora: Frahm CA-909.</li>
+        <li>DAW: FL Studio 12.</li>
+        <li>Microfone: Não é Profissional.</li>
+        <li>Programa de Partitura: Musescore 3.</li>
+        <li>Editor de Vídeos: VEGAS Pro 18.</li>   
+        
+    </p>
+
+    <hr>
+    <p>
+        Por mais que eu goste de fazer música, eu também adoro ouvir e analisar a música dos outros, por esse motivo, eu<br>
+        também quero ter uma seção para Reviews, Playlists e Recomendações no site. Isso é importante não só para divulgar<br>
+        música boa, mas também para deixar claras as minhas influências e meus interesses como músico.
+    </p>
+
+    <div>
+        <button class="btn">Dark</button>
+    </div>
+    <script src="app.js"></script>
+    <noscript>You need to enable JS to view the full site</noscript>
+
+</body>
+</html>
