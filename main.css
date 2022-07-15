@@ -45,12 +45,13 @@ body {
     .framed {
         border: 3px outset;  
         border-color:      var(--fontColor);
-        border-spacing: 3px;  
+        border-spacing: 3px;
+        box-shadow: 2px 4px var(--frameShadow);
     }
 
     .grid {
         display: grid;
-        grid-template-columns: 200px 200px 200px 200px 200px 200px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 50px));
         grid-auto-rows: max-content;
         text-align: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -121,6 +122,7 @@ body {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: large;
         font-weight: 600;
+        box-shadow: 8px 12px var(--frameShadow);
         
         top: 0px;
         left: 350px;
@@ -128,10 +130,11 @@ body {
         width: 75px;
         border-radius: 80%;
         margin: 15px;
-        border:15px;
+        border: 5px outset;
         border-color: var(--btnBorder);
         color: var(--btnFontColor);
         background-color: var(--btnBg);
+        box-shadow: 8px 12px var(--frameShadow);
              
         }
 
@@ -151,26 +154,32 @@ body {
         border-radius: 5%;
         border-color: var(--btnBg);
         margin: 5px;
-        border: 10px outset;
+        border: 5px outset;
         border-color: var(--btnBorder);
         color: var(--btnFontColor);
         background-color: var(--btnBg);
+        box-shadow: 8px 12px var(--frameShadow);
              
     }
         .btn:hover {
-            border: var(--dark) 5px;
+            border: 5px;
             background: var(--fontColor);
+            background-color: var(--btnHoverColor);
+
             -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
             transform: scale(1.1);
+            box-shadow: 8px 12px var(--frameShadow);
             }
 
         .btn2:hover {
-            border: var(--dark) 5px;
             background: var(--fontColor);
+            background-color: var(--btnHoverColor);
+
             -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
-            transform: scale(1.1);               
+            transform: scale(1.1);
+            box-shadow: 8px 12px var(--frameShadow);           
         }
         
         .framed:hover {
@@ -179,6 +188,8 @@ body {
             -webkit-transform: scale(0.9);
             -ms-transform: scale(0.9);
             transform: scale(0.9);
+            box-shadow: 3px 6px var(--frameShadow);
+
         }
         .btn:focus  { outline-style:outset }
         .grid:focus { outline-style:outset }
@@ -191,6 +202,7 @@ body {
         --btnBg: var(--dark);
         --btnFontColor: var(--white);
         --btnBorder: var(--dark);
+        --btnHoverColor: var(--black);       
         
         --sidebar-color: var(--light);
         --hr-color:      var(--sidebar-color);
@@ -198,7 +210,8 @@ body {
         --framedBorder: 3px outset var(--white);
         --font-shadow-color: var(--greyer);
 
-        --sidebar-fontShadow: var(--btnFontColor)
+        --sidebar-fontShadow: var(--btnFontColor);
+        --frameShadow: var(--font-shadow-color);
     }
     .dark-theme {
         --bg: var(--dark);
@@ -207,6 +220,7 @@ body {
         --btnBg: var(--light);
         --btnFontColor: var(--black);
         --btnBorder: var(--dark);
+        --btnHoverColor: var(--white);
 
         --sidebar-color: var(--grey);
         --hr-color:      var(--sidebar-color);
@@ -215,6 +229,7 @@ body {
         --font-shadow-color: var(--sidebar-color);
 
         --sidebar-fontShadow: var(--greyer);
+        --frameShadow: var(--dark);
     }
 
     .sidebar {
@@ -229,7 +244,7 @@ body {
         border: 10px inset var(--btnBg);
         border-top: 3px inset var(--btnBg);
         border-left: 0px;
-
+        
         text-shadow: 2px 2px var(--sidebar-fontShadow);
         
         }
@@ -244,4 +259,42 @@ body {
         .body-text {
         margin-right: 100px; 
         font-size: 16px;
+        }
+
+
+
+        .basic-grid {
+
+            display: grid;
+            gap: 20px ;
+            
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        
+        }
+
+        .card {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--sidebar-color);
+            font-size: 30px;
+            color: lavender;
+            box-shadow: 1px 3px var(--sidebar-fontShadow);
+            height: 100%;
+            transition: var(--transformStuff) 500ms;
+            
+        
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            --transformStuff: translate(-3px) scale(1.02);
+        }
+        
+        .card:hover{
+            box-shadow: 1px 6px var(--bg);
+            transform: var(--transformStuff);
+            transition: ease-in-out 500ms;
+            
         }

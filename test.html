@@ -1,80 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
 <body>
-<h1 style="color: green">
-	GeeksforGeeks
-</h1>
-	
-<p>
-	Click on the buttons below to change
-	the language of the webpage.
-</p>
-
-<!-- Define the buttons that will
-change the language of the page
-and reload it -->
-<button onclick="changeLanguage('eng')">
-	Change to English<
-	/button>
-<button onclick="changeLanguage('es')">
-	Change to Spanish
-</button>
-<button onclick="changeLanguage('hin')">
-	Change to Hindi
-</button>
-
-<!-- Define the content of the page
-that would be changed -->
-<p id="siteContent">
-	Welcome to the GeeksforGeeks Portal!
-	You can choose any language using the
-	buttons above!
-</p>
-
-
-<script>
-	// Create a function to change
-	// the hash value of the page
-	function changeLanguage(lang) {
-	location.hash = lang;
-	location.reload();
-	}
-
-	// Define the language reload anchors
-	var language = {
-	eng: {
-		welcome: "Welcome to the GeeksforGeeks " +
-		"Portal! You can choose any language " +
-		"using the buttons above!"
-	},
-	es: {
-		welcome: "¡Bienvenido al portal GeeksforGeeks! " +
-		"¡Puedes elegir cualquier idioma usando " +
-		"los botones de arriba!"
-	},
-	hin: {
-		welcome: "GeeksforGeeks पोर्टल पर आपका स्वागत है! " +
-		"आप ऊपर दिए गए बटन का उपयोग करके किसी भी " +
-		"भाषा को चुन सकते हैं!"
-	}
-	};
-
-	// Check if a hash value exists in the URL
-	if (window.location.hash) {
-
-	// Set the content of the webpage
-	// depending on the hash value
-	if (window.location.hash == "#es") {
-		siteContent.textContent =
-		language.es.welcome;
-	}
-	else if (window.location.hash == "#hin") {
-		siteContent.textContent =
-		language.hin.welcome;
-	}
-	}
-</script>
+    <section class="basic-grid">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+    </section>
 </body>
-
 </html>
