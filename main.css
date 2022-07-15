@@ -77,15 +77,39 @@ body {
 
     h2 {
         font-size: 28px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
     }
 
+    h3 {
+        font-size: 24px;
+        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 200;
+        text-shadow: 2px 2px var(--font-shadow-color);
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    a {color: black; text-decoration:none; font-weight:400;}
+
     p {
         font-size: 18px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 100;
+        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 200;
         text-shadow: 1px 1px var(--font-shadow-color);
     }
 
@@ -173,6 +197,8 @@ body {
 
         --framedBorder: 3px outset var(--white);
         --font-shadow-color: var(--greyer);
+
+        --sidebar-fontShadow: var(--btnFontColor)
     }
     .dark-theme {
         --bg: var(--dark);
@@ -187,10 +213,12 @@ body {
         
         --framedBorder: 3px outset var(--light);
         --font-shadow-color: var(--sidebar-color);
+
+        --sidebar-fontShadow: var(--greyer);
     }
 
     .sidebar {
-        height: 1200px;
+        height: 12000px;
         width: 240px;
         position: fixed;
         top: 0;
@@ -202,7 +230,7 @@ body {
         border-top: 3px inset var(--btnBg);
         border-left: 0px;
 
-        text-shadow: 2px 2px var(--btnFontColor);
+        text-shadow: 2px 2px var(--sidebar-fontShadow);
         
         }
         
