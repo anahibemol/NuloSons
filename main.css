@@ -1,11 +1,17 @@
 :root{
-    --grey: #6d6d6d;
-    --greyer: #4e4e4e;
-    --light: #dadada;
-    --white: #ffffff;
-    --dark: #2b2b2b; 
-    --darker: #111111; 
-    --black: #000000; 
+    --grey: hsl(0, 0%, 43%);
+    --greyer: hsl(0, 0%, 31%);
+
+    --red-dark: hsl(2, 98%, 25%);
+    --red-normal: hsl(2, 98%, 36%);
+    --red-pastel: hsl(2, 54%, 64%);
+
+    --light: hsl(0, 0%, 85%);
+    --white: hsl(0, 0%, 100%);
+
+    --dark: hsl(0, 0%, 17%); 
+    --darker: hsl(0, 0%, 7%); 
+    --black: hsl(0, 0%, 0%); 
     }
 
 *{
@@ -16,7 +22,7 @@
 
 
 body {
-    background: linear-gradient(-5deg, var(--bg), var(--sidebar-color), var(--bg),var(--bg));
+    background: radial-gradient(var(--bg), var(--sidebar-color), var(--bg),var(--bg));
     background-size: 400% 400%;
     animation: gradient 120s ease infinite;
 }
@@ -37,36 +43,9 @@ body {
     ul {
     
         font-size:16px;
-        font-family: 'Trebuchet';
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 400;
     
-    }
-
-    .framed {
-        border: 3px outset;  
-        border-color:      var(--fontColor);
-        border-spacing: 3px;
-        box-shadow: 2px 4px var(--frameShadow);
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 50px));
-        grid-auto-rows: max-content;
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 800;
-
-        margin: 10px;
-        border-color: var(--btnBorder);
-
-    }
-
-    .hr-1{
-        color: var(--sidebar-color);
-        border-top: 3px solid var(--sidebar-color);
-        border-bottom: 5px var(--greyer);
-        border-bottom-style: groove;
     }
 
     h1 {
@@ -74,6 +53,7 @@ body {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 400;
         text-shadow: 3px 3px var(--font-shadow-color);
+        overflow: hidden;
     }
 
     h2 {
@@ -81,6 +61,7 @@ body {
         font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
+        overflow: hidden;
     }
 
     h3 {
@@ -88,6 +69,7 @@ body {
         font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
+        overflow: hidden;
     }
 
     table {
@@ -112,6 +94,41 @@ body {
         font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
         text-shadow: 1px 1px var(--font-shadow-color);
+    }
+
+
+
+    .framed {
+        border: 3px outset;  
+        border-color:      var(--fontColor);
+        border-spacing: 3px;
+        box-shadow: 2px 4px var(--fontShadow);
+        
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 50px));
+        grid-auto-rows: max-content;
+        text-align: center;
+        
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 800;
+
+        margin: 10px;
+        border-color: var(--btnBorder);
+
+    }
+
+    .hr-1{
+        color: var(--sidebar-color);
+        border-top: 3px solid var(--sidebar-color);
+        border-bottom: 5px var(--greyer);
+        border-bottom-style: groove;
+    }
+
+    .gridtext {
+        text-shadow: var(--grid-shadow);
     }
 
     .btn {
@@ -180,7 +197,7 @@ body {
             transform: scale(1.05);
             box-shadow: 8px 12px var(--frameShadow);           
         }
-        
+    
         .framed:hover {
             border: 6px outset;
             border-color: var(--fontColor);
@@ -189,14 +206,18 @@ body {
             transform: scale(1.1);
             transition: ease-in-out var(--framedDelay);
             --framedDelay: 500ms;
-            animation-delay: var(--framedDelay);
-            box-shadow: 3px 6px var(--frameShadow);
+            animation-delay: var(--framedDelay) + 200ms;
+            box-shadow: 4px 6px var(--frameShadow);
+            
 
         }
+
+
         .btn:focus  { outline-style:outset }
         .grid:focus { outline-style:outset }
         .img:focus  { outline-style:outset }
-        
+
+      
     .light-theme {
         --bg: var(--grey);
         --fontColor: var(--darker);
@@ -210,7 +231,8 @@ body {
         --hr-color:      var(--sidebar-color);
 
         --framedBorder: 3px outset var(--white);
-        --font-shadow-color: var(--greyer);
+        --font-shadow-color: var(--bg);
+        --grid-shadow: 2px 1px var(--font-shadow-color);
 
         --sidebar-fontShadow: var(--btnFontColor);
         --frameShadow: var(--font-shadow-color);
@@ -229,6 +251,7 @@ body {
         
         --framedBorder: 3px outset var(--light);
         --font-shadow-color: var(--sidebar-color);
+        --grid-shadow: 3px 2px var(--font-shadow-color);
 
         --sidebar-fontShadow: var(--greyer);
         --frameShadow: var(--dark);
@@ -274,6 +297,7 @@ body {
         
         }
 
+
         .card {
 
             display: flex;
@@ -301,3 +325,6 @@ body {
             
             
         }
+
+
+        
