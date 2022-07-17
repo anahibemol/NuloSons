@@ -29,6 +29,8 @@ body {
     background: radial-gradient(var(--gradientC1), var(--gradientC2), var(--gradientC1),var(--gradientC1));
     background-size: 150% 600%;
     animation: gradient 90s ease infinite;
+    margin-right: 200px;
+    
 }
 
 @keyframes gradient {
@@ -44,6 +46,7 @@ body {
 }
 
 
+
     ul {
     
         font-size:16px;
@@ -51,6 +54,7 @@ body {
         font-weight: 400;
     
     }
+
 
     h1 {
         font-size: 36px;
@@ -98,6 +102,24 @@ body {
         font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
         text-shadow: 1px 1px var(--font-shadow-color);
+    }
+
+    .Title-Main {
+        margin: 2px;
+        padding: 5px;
+    }
+
+    .Subtitle-Main {
+        margin: 2px;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+
+    label {
+        font-size: 22px;
+        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 200;
+        text-shadow: 1px 1px var(--font-shadow-color);        
     }
 
 
@@ -292,6 +314,7 @@ body {
         border: 10px inset var(--shadowHover);
         border-top: 3px inset var(--side);
         border-left: 0px;
+        margin-left: 100px;
         
         text-shadow: 2px 2px var(--sidebar-fontShadow);
         
@@ -315,6 +338,7 @@ body {
 
             display: grid;
             gap: 20px ;
+            
             
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         
