@@ -5,6 +5,10 @@
     --red-dark: hsl(2, 98%, 25%);
     --red-normal: hsl(2, 98%, 36%);
     --red-pastel: hsl(2, 54%, 64%);
+    --red-pastel-ulight: hsl(2, 100%, 95%);
+    --red-pastel-light: hsl(2, 54%, 80%);
+    --red-pastel-dark: hsl(2, 54%, 40%);
+    --red-pastel-darker: hsl(2, 54%, 20%);
 
     --light: hsl(0, 0%, 85%);
     --white: hsl(0, 0%, 100%);
@@ -22,9 +26,9 @@
 
 
 body {
-    background: radial-gradient(var(--bg), var(--sidebar-color), var(--bg),var(--bg));
-    background-size: 400% 400%;
-    animation: gradient 120s ease infinite;
+    background: radial-gradient(var(--gradientC1), var(--gradientC2), var(--gradientC1),var(--gradientC1));
+    background-size: 150% 600%;
+    animation: gradient 90s ease infinite;
 }
 
 @keyframes gradient {
@@ -102,7 +106,7 @@ body {
         border: 3px outset;  
         border-color:      var(--fontColor);
         border-spacing: 3px;
-        box-shadow: 2px 4px var(--fontShadow);
+        box-shadow: 2px 4px var(--FrameShadow);
         
     }
 
@@ -123,8 +127,15 @@ body {
     .hr-1{
         color: var(--sidebar-color);
         border-top: 3px solid var(--sidebar-color);
-        border-bottom: 5px var(--greyer);
+        border-bottom: 5px var(--sidebar-fontShadow);
         border-bottom-style: groove;
+    }
+    .hr-1:hover{
+        color: var(--sidebar-color);
+        border-top: 3px solid var(--sidebar-color);
+        border-bottom: 5px var(--sidebar-fontShadow);
+        border-bottom-style: groove;
+        text-shadow: var(--FrameShadow);
     }
 
     .gridtext {
@@ -219,42 +230,54 @@ body {
 
       
     .light-theme {
+        --gradientC1: var(--red-pastel);
+        --gradientC2: var(--red-pastel-light);
         --bg: var(--grey);
         --fontColor: var(--darker);
-
-        --btnBg: var(--dark);
-        --btnFontColor: var(--white);
-        --btnBorder: var(--dark);
-        --btnHoverColor: var(--black);       
         
-        --sidebar-color: var(--light);
-        --hr-color:      var(--sidebar-color);
+
+        --btnBg: var(--red-pastel-dark);
+        --btnFontColor: var(--red-pastel-ulight);
+        --btnBorder: var(--red-normal);
+        --btnHoverColor: var(--red-dark);       
+        
+        --sidebar-color: var(--red-pastel);
+        --hr-color:      var(--gradientC2);
 
         --framedBorder: 3px outset var(--white);
-        --font-shadow-color: var(--bg);
+        --FrameShadow: var(--red-pastel);
+        --font-shadow-color: var(--red-pastel);
         --grid-shadow: 2px 1px var(--font-shadow-color);
 
-        --sidebar-fontShadow: var(--btnFontColor);
+        --sidebar-fontShadow: var(--red-pastel-dark);
         --frameShadow: var(--font-shadow-color);
+        --shadowHover: var(--red-pastel-darker);
+
+        
     }
     .dark-theme {
+        --gradientC1: var(--red-pastel-dark);
+        --gradientC2: var(--red-pastel-darker);
         --bg: var(--dark);
-        --fontColor: var(--light);
+        --fontColor: var(--red-pastel-ulight);
+        
 
-        --btnBg: var(--light);
-        --btnFontColor: var(--black);
-        --btnBorder: var(--dark);
-        --btnHoverColor: var(--white);
+        --btnBg: var(--red-pastel-light);
+        --btnFontColor: var(--red-pastel-darker);
+        --btnBorder: var(--red-dark);
+        --btnHoverColor: var(--red-pastel-ulight);
 
-        --sidebar-color: var(--grey);
-        --hr-color:      var(--sidebar-color);
+        --sidebar-color: var(--red-pastel-dark);
+        --hr-color:      var(--gradientC2);
         
         --framedBorder: 3px outset var(--light);
         --font-shadow-color: var(--sidebar-color);
         --grid-shadow: 3px 2px var(--font-shadow-color);
+        --FrameShadow: var(--red-pastel-darker);
 
-        --sidebar-fontShadow: var(--greyer);
-        --frameShadow: var(--dark);
+        --sidebar-fontShadow: var(--red-pastel-darker);
+        --frameShadow: var(--red-pastel-darker);
+        --shadowHover: var(--red-dark);
     }
 
     .sidebar {
@@ -266,8 +289,8 @@ body {
         padding-top: 40px;
         background-color: var(--sidebar-color);
         background-blend-mode:difference;
-        border: 10px inset var(--btnBg);
-        border-top: 3px inset var(--btnBg);
+        border: 10px inset var(--shadowHover);
+        border-top: 3px inset var(--side);
         border-left: 0px;
         
         text-shadow: 2px 2px var(--sidebar-fontShadow);
@@ -319,7 +342,7 @@ body {
         }
         
         .card:hover{
-            box-shadow: 2px 6px var(--bg);
+            box-shadow: 2px 6px var(--shadowHover);
             transform: var(--transformStuff);
             transition: ease-in-out 600ms;
             
