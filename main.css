@@ -28,14 +28,24 @@
 
 body {
     background:
-    linear-gradient(90deg, var(--gradientC1), var(--gradientC2), var(--gradientC1),var(--gradientC1)),
-    linear-gradient(180deg, var(--gradientC1), var(--gradientC1), var(--gradientC2),var(--gradientC1));
+        radial-gradient(circle at 50% 0,
+          var(--gradientC1),
+          var(--gradientC2) 70.71%),
+        radial-gradient(circle at 6.7% 75%,
+          var(--gradientC2),
+          var(--gradientC1) 70.71%),
+        radial-gradient(circle at 93.3% 75%,
+          var(--gradientC1),
+          var(--gradientC2) 70.71%) beige;          
+    border-radius: 50%;
+
     background-size: 150% 100%;
     animation: gradient 45s ease infinite;
     margin-right: 200px;
     
     
 }
+
 
 @keyframes gradient {
     0% {
@@ -57,6 +67,12 @@ body {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 400;
     
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 32px;
+            }
+          }
+
     }
 
 
@@ -67,6 +83,12 @@ body {
         text-shadow: 3px 3px var(--font-shadow-color);
         overflow: hidden;
         margin-right: 60px;
+
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 72px;
+            }
+          }
     }
 
     h2 {
@@ -76,6 +98,12 @@ body {
         text-shadow: 2px 2px var(--font-shadow-color);
         overflow: hidden;
         margin-right: 60px;
+
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 56px;
+            }
+          }
     }
 
     h3 {
@@ -85,6 +113,12 @@ body {
         text-shadow: 2px 2px var(--font-shadow-color);
         overflow: hidden;
         margin-right: 0px;
+
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 48px;
+            }
+          }
     }
 
     table {
@@ -128,16 +162,23 @@ body {
         font-size: 22px;
         font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
-        text-shadow: 1px 1px var(--font-shadow-color);        
+        text-shadow: 1px 1px var(--font-shadow-color);
+        
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 44px;
+            }
+          }
     }
 
 
 
     .framed {
         border: 3px outset;  
-        border-color:      var(--fontColor);
+        border-color:      var(--sidebar-fontShadow);
         border-spacing: 3px;
         box-shadow: 2px 4px var(--FrameShadow);
+        animation: ease-out 400ms;
         
     }
 
@@ -243,14 +284,14 @@ body {
     
         .framed:hover {
             border: 6px outset;
-            border-color: var(--fontColor);
+            border-color: var(--FrameShadow);
             -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
             transform: scale(1.1);
             transition: ease-in-out var(--framedDelay);
-            --framedDelay: 500ms;
+            --framedDelay: 100ms;
             animation-delay: var(--framedDelay) + 200ms;
-            box-shadow: 4px 6px var(--frameShadow);
+            box-shadow: 3px 6px var(--frameShadow);
             
 
         }
@@ -324,7 +365,7 @@ body {
         border: 10px inset var(--shadowHover);
         border-top: 3px inset var(--side);
         border-left: 0px;
-        margin-left: 100px;
+        margin-left: 200px;
         
         text-shadow: 2px 2px var(--sidebar-fontShadow);
         
