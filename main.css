@@ -15,7 +15,8 @@
 
     --dark: hsl(0, 0%, 17%); 
     --darker: hsl(0, 0%, 7%); 
-    --black: hsl(0, 0%, 0%); 
+    --black: hsl(0, 0%, 0%);
+    
     }
 
 *{
@@ -26,10 +27,13 @@
 
 
 body {
-    background: radial-gradient(var(--gradientC1), var(--gradientC2), var(--gradientC1),var(--gradientC1));
-    background-size: 150% 600%;
-    animation: gradient 90s ease infinite;
+    background:
+    linear-gradient(90deg, var(--gradientC1), var(--gradientC2), var(--gradientC1),var(--gradientC1)),
+    linear-gradient(180deg, var(--gradientC1), var(--gradientC1), var(--gradientC2),var(--gradientC1));
+    background-size: 150% 100%;
+    animation: gradient 45s ease infinite;
     margin-right: 200px;
+    
     
 }
 
@@ -62,6 +66,7 @@ body {
         font-weight: 400;
         text-shadow: 3px 3px var(--font-shadow-color);
         overflow: hidden;
+        margin-right: 60px;
     }
 
     h2 {
@@ -70,6 +75,7 @@ body {
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
         overflow: hidden;
+        margin-right: 60px;
     }
 
     h3 {
@@ -78,12 +84,14 @@ body {
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
         overflow: hidden;
+        margin-right: 0px;
     }
 
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
+        margin-right: 60px;
     }
     
     td, th {
@@ -102,6 +110,7 @@ body {
         font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         font-weight: 200;
         text-shadow: 1px 1px var(--font-shadow-color);
+        margin-right: 60px;
     }
 
     .Title-Main {
@@ -136,6 +145,7 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 50px));
         grid-auto-rows: max-content;
+        align-content: center;
         text-align: center;
         
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -372,6 +382,35 @@ body {
             
             
         }
+
+        .main-text {
+            line-break: strict;
+            
+          }
+        
+          /* width */
+        ::-webkit-scrollbar {
+            width: 16px;
+            background: linear-gradient(90deg, var(--sidebar-color), var(--gradientC2), var(--gradientC1),var(--gradientC1));
+            animation: gradient 1s ease infinite;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: var(--sidebar-color);
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: linear-gradient(360deg, var(--sidebar-color), var(--gradientC1), var(--sidebar-color),var(--gradientC1));
+            animation: gradient 1s ease infinite;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: var(--sidebar-fontShadow);
+          }
+        
 
 
         
