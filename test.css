@@ -39,3 +39,39 @@ body, html{
     transform: translate(-3px) scale(1.05);
     
 }
+
+.nonrepeating {	
+    background-image:
+            linear-gradient(90deg,
+                transparent 27%, 
+                rgba(255, 255, 255, 0.3) 27%  29%, 
+                transparent 29%  31%, 
+                rgba(255, 255, 255, 0.2) 31%  54%, 
+                transparent 54%),
+            linear-gradient(90deg,
+                transparent 11%, 
+                rgba(255, 255, 255, 0.2) 11%  17%, 
+                transparent 17%  57%, 
+                rgba(255, 255, 255, 0.35) 57%  63%, 
+                transparent 63%),
+            linear-gradient(90deg,  
+                transparent 4%,
+                rgba(255, 255, 255, 0.15) 4%  9%, 
+                transparent 9%  51%, 
+                rgba(255, 255, 255, 0.25) 51%  52%, 
+                transparent 52% 68%, 
+                rgba(255, 255, 255, 0.35) 68%  75%, 
+                transparent 75%),
+            linear-gradient(90deg, 
+                transparent 1%, 
+                rgba(255, 255, 255, 0.2) 2%  27%, 
+                transparent 27%  64%, 
+                rgba(255, 255, 255, 0.5) 64%  95%, 
+                transparent 95%),
+            linear-gradient(-70deg,
+                rgba(78, 55, 128, 1) 0%, 
+                rgba(96, 78, 227, 0.5) 100%);	
+    
+    background-size: 100px 100%, 127px 100%, 159px 100%, 181px 100%, 100% 100%;
+        
+}	

@@ -1,3 +1,6 @@
+@import "background.css";
+@import "sidebar.css";
+@import "buttons.css";
 :root{
     --grey: hsl(0, 0%, 43%);
     --greyer: hsl(0, 0%, 31%);
@@ -26,25 +29,7 @@
 
 
 
-body {
-    background:
-        radial-gradient(circle at 50% 0,
-          var(--gradientC1),
-          var(--gradientC2) 70.71%),
-        radial-gradient(circle at 6.7% 75%,
-          var(--gradientC2),
-          var(--gradientC1) 70.71%),
-        radial-gradient(circle at 93.3% 75%,
-          var(--gradientC1),
-          var(--gradientC2) 70.71%) beige;          
-    border-radius: 50%;
 
-    background-size: 150% 100%;
-    animation: gradient 45s ease infinite;
-    margin-right: 200px;
-    
-    
-}
 
 
 @keyframes gradient {
@@ -196,19 +181,12 @@ body {
         border-color: var(--btnBorder);
 
     }
-
+        
     .hr-1{
         color: var(--sidebar-color);
         border-top: 3px solid var(--sidebar-color);
         border-bottom: 5px var(--sidebar-fontShadow);
         border-bottom-style: groove;
-    }
-    .hr-1:hover{
-        color: var(--sidebar-color);
-        border-top: 3px solid var(--sidebar-color);
-        border-bottom: 5px var(--sidebar-fontShadow);
-        border-bottom-style: groove;
-        text-shadow: var(--FrameShadow);
     }
 
     .gridtext {
@@ -285,6 +263,9 @@ body {
         .framed:hover {
             border: 6px outset;
             border-color: var(--FrameShadow);
+            background: var(--frameShadow);
+            background-repeat: no-repeat;
+            background-size: cover;
             -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
             transform: scale(1.1);
@@ -303,8 +284,6 @@ body {
 
       
     .light-theme {
-        --gradientC1: var(--red-pastel);
-        --gradientC2: var(--red-pastel-light);
         --bg: var(--grey);
         --fontColor: var(--darker);
         
@@ -314,23 +293,18 @@ body {
         --btnBorder: var(--red-normal);
         --btnHoverColor: var(--red-dark);       
         
-        --sidebar-color: var(--red-pastel);
-        --hr-color:      var(--gradientC2);
 
         --framedBorder: 3px outset var(--white);
         --FrameShadow: var(--red-pastel);
         --font-shadow-color: var(--red-pastel);
         --grid-shadow: 2px 1px var(--font-shadow-color);
 
-        --sidebar-fontShadow: var(--red-pastel-dark);
         --frameShadow: var(--font-shadow-color);
-        --shadowHover: var(--red-pastel-darker);
+
 
         
     }
     .dark-theme {
-        --gradientC1: var(--red-pastel-dark);
-        --gradientC2: var(--red-pastel-darker);
         --bg: var(--dark);
         --fontColor: var(--red-pastel-ulight);
         
@@ -339,90 +313,17 @@ body {
         --btnFontColor: var(--red-pastel-darker);
         --btnBorder: var(--red-dark);
         --btnHoverColor: var(--red-pastel-ulight);
-
-        --sidebar-color: var(--red-pastel-dark);
-        --hr-color:      var(--gradientC2);
+        
         
         --framedBorder: 3px outset var(--light);
         --font-shadow-color: var(--sidebar-color);
         --grid-shadow: 3px 2px var(--font-shadow-color);
         --FrameShadow: var(--red-pastel-darker);
 
-        --sidebar-fontShadow: var(--red-pastel-darker);
         --frameShadow: var(--red-pastel-darker);
-        --shadowHover: var(--red-dark);
     }
 
-    .sidebar {
-        height: 12000px;
-        width: 240px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding-top: 40px;
-        background-color: var(--sidebar-color);
-        background-blend-mode:difference;
-        border: 10px inset var(--shadowHover);
-        border-top: 3px inset var(--side);
-        border-left: 0px;
-        margin-left: 200px;
-        
-        text-shadow: 2px 2px var(--sidebar-fontShadow);
-        
-        }
-        
-        .sidebar div {
-        padding: 10px;
-        font-size: 24px;
-        line-height: 60px;
-        display: block;
-        }
-        
-        .body-text {
-        margin-right: 100px; 
-        font-size: 16px;
-        }
-
-
-
-        .basic-grid {
-
-            display: grid;
-            gap: 20px ;
-            
-            
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        
-        }
-
-
-        .card {
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: var(--sidebar-color);
-            font-size: 30px;
-            color: lavender;
-            box-shadow: 0px 4px var(--sidebar-fontShadow);
-            height: 100%;
-            transition: var(--transformStuff) 500ms;
-            
-        
-            background-size: cover;
-            background-position: center;
-            background-repeat: repeat;
-            --transformStuff: translate(-6px) scale(1.02);
-        }
-        
-        .card:hover{
-            box-shadow: 2px 6px var(--shadowHover);
-            transform: var(--transformStuff);
-            transition: ease-in-out 600ms;
-            
-            
-        }
+    
 
         .main-text {
             line-break: strict;

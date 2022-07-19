@@ -1,0 +1,51 @@
+:root{
+    --grey: hsl(0, 0%, 43%);
+    --greyer: hsl(0, 0%, 31%);
+
+    --red-dark: hsl(2, 98%, 25%);
+    --red-normal: hsl(2, 98%, 36%);
+    --red-pastel: hsl(2, 54%, 64%);
+    --red-pastel-ulight: hsl(2, 100%, 95%);
+    --red-pastel-light: hsl(2, 54%, 80%);
+    --red-pastel-dark: hsl(2, 54%, 40%);
+    --red-pastel-darker: hsl(2, 54%, 20%);
+
+    --light: hsl(0, 0%, 85%);
+    --white: hsl(0, 0%, 100%);
+
+    --dark: hsl(0, 0%, 17%); 
+    --darker: hsl(0, 0%, 7%); 
+    --black: hsl(0, 0%, 0%);
+    
+    }
+
+    body {
+        background:
+            radial-gradient(circle at 50% 0,
+              var(--gradientC1),
+              var(--gradientC2) 70.71%),
+            radial-gradient(circle at 6.7% 75%,
+              var(--gradientC2),
+              var(--gradientC1) 70.71%),
+            radial-gradient(circle at 93.3% 75%,
+              var(--gradientC1),
+              var(--gradientC2) 70.71%) beige;          
+        border-radius: 50%;
+    
+        background-size: 150% 100%;
+        animation: gradient 45s ease infinite;
+        margin-right: 200px;
+        
+        
+    }
+
+    .light-theme {
+        --gradientC1: var(--red-pastel);
+        --gradientC2: var(--red-pastel-light);
+        
+    }
+    .dark-theme {
+        --gradientC1: var(--red-pastel-dark);
+        --gradientC2: var(--red-pastel-darker);
+
+    }

@@ -1,0 +1,116 @@
+:root{
+    --grey: hsl(0, 0%, 43%);
+    --greyer: hsl(0, 0%, 31%);
+
+    --red-dark: hsl(2, 98%, 25%);
+    --red-normal: hsl(2, 98%, 36%);
+    --red-pastel: hsl(2, 54%, 64%);
+    --red-pastel-ulight: hsl(2, 100%, 95%);
+    --red-pastel-light: hsl(2, 54%, 80%);
+    --red-pastel-dark: hsl(2, 54%, 40%);
+    --red-pastel-darker: hsl(2, 54%, 20%);
+
+    --light: hsl(0, 0%, 85%);
+    --white: hsl(0, 0%, 100%);
+
+    --dark: hsl(0, 0%, 17%); 
+    --darker: hsl(0, 0%, 7%); 
+    --black: hsl(0, 0%, 0%);
+    
+    }
+
+.sidebar {
+    height: 12000px;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 40px;
+    background-color: var(--sidebar-color);
+    background-blend-mode:difference;
+    border: 10px inset var(--shadowHover);
+    border-top: 3px inset var(--side);
+    border-left: 0px;
+    margin-left: 200px;
+    
+    text-shadow: 2px 2px var(--sidebar-fontShadow);
+    
+    }
+    
+    .sidebar div {
+    padding: 10px;
+    font-size: 24px;
+    line-height: 60px;
+    display: block;
+    }
+    
+    .body-text {
+    margin-right: 100px; 
+    font-size: 16px;
+    }
+
+
+
+    .basic-grid {
+
+        display: grid;
+        gap: 20px ;
+        
+        
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    
+    }
+
+
+    .card {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--sidebar-color);
+        font-size: 30px;
+        color: lavender;
+        box-shadow: 0px 4px var(--sidebar-fontShadow);
+        height: 100%;
+        transition: var(--transformStuff) 500ms;
+        
+    
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        --transformStuff: translate(-6px) scale(1.02);
+    }
+    
+    .card:hover{
+        box-shadow: 2px 6px var(--shadowHover);
+        transform: var(--transformStuff);
+        transition: ease-in-out 600ms;
+        
+        
+    }
+
+    .light-theme {
+        --bg: var(--grey);
+        --fontColor: var(--darker);
+             
+        --sidebar-color: var(--red-pastel);
+        --hr-color:      var(--gradientC2);
+
+        --sidebar-fontShadow: var(--red-pastel-dark);
+        --frameShadow: var(--font-shadow-color);
+        --shadowHover: var(--red-pastel-darker);
+
+        
+    }
+    .dark-theme {
+        --bg: var(--dark);
+        --fontColor: var(--red-pastel-ulight);
+        
+        --sidebar-color: var(--red-pastel-dark);
+        --hr-color:      var(--gradientC2);
+        
+        --sidebar-fontShadow: var(--red-pastel-darker);
+        --frameShadow: var(--red-pastel-darker);
+        --shadowHover: var(--red-dark);
+    }
