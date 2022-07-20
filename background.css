@@ -20,6 +20,7 @@
     }
 
     body {
+        margin: 4px;
         background:
             radial-gradient(circle at 50% 0,
               var(--gradientC1),

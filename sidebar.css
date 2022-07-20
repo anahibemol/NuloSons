@@ -4,6 +4,7 @@
 
     --red-dark: hsl(2, 98%, 25%);
     --red-normal: hsl(2, 98%, 36%);
+    --red-light: hsl(2, 58%, 56%);
     --red-pastel: hsl(2, 54%, 64%);
     --red-pastel-ulight: hsl(2, 100%, 95%);
     --red-pastel-light: hsl(2, 54%, 80%);
@@ -37,6 +38,10 @@
     
     }
     
+    .sidebar-text {
+        color: var(--sidebar-fontColor);
+    }
+
     .sidebar div {
     padding: 10px;
     font-size: 24px;
@@ -97,7 +102,8 @@
         --sidebar-color: var(--red-pastel);
         --hr-color:      var(--gradientC2);
 
-        --sidebar-fontShadow: var(--red-pastel-dark);
+        --sidebar-fontColor: var(--fontColor);
+        --sidebar-fontShadow: var(--red-light);
         --frameShadow: var(--font-shadow-color);
         --shadowHover: var(--red-pastel-darker);
 
@@ -109,7 +115,8 @@
         
         --sidebar-color: var(--red-pastel-dark);
         --hr-color:      var(--gradientC2);
-        
+
+        --sidebar-fontColor: var(--fontColor);
         --sidebar-fontShadow: var(--red-pastel-darker);
         --frameShadow: var(--red-pastel-darker);
         --shadowHover: var(--red-dark);

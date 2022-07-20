@@ -19,6 +19,7 @@
     --dark: hsl(0, 0%, 17%); 
     --darker: hsl(0, 0%, 7%); 
     --black: hsl(0, 0%, 0%);
+    font-family: 'Noto sans', sans-serif;
     
     }
 
@@ -49,7 +50,7 @@
     ul {
     
         font-size:16px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Noto sans', sans-serif;
         font-weight: 400;
     
         @media screen and (min-width: 600px) {
@@ -60,25 +61,22 @@
 
     }
 
+    body {
+        scrollbar-color: var(--gradientC1);
+        scrollbar-width: thin;
+    }
 
     h1 {
-        font-size: 36px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Noto sans', sans-serif;
         font-weight: 400;
         text-shadow: 3px 3px var(--font-shadow-color);
         overflow: hidden;
         margin-right: 60px;
-
-        @media screen and (min-width: 600px) {
-            div.example {
-              font-size: 72px;
-            }
-          }
     }
 
     h2 {
-        font-size: 28px;
-        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+
+        font-family: 'Noto sans', sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
         overflow: hidden;
@@ -93,17 +91,12 @@
 
     h3 {
         font-size: 24px;
-        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Noto sans', sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px var(--font-shadow-color);
         overflow: hidden;
         margin-right: 0px;
 
-        @media screen and (min-width: 600px) {
-            div.example {
-              font-size: 48px;
-            }
-          }
     }
 
     table {
@@ -126,26 +119,45 @@
 
     p {
         font-size: 18px;
-        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Noto sans', sans-serif;
         font-weight: 200;
         text-shadow: 1px 1px var(--font-shadow-color);
         margin-right: 60px;
     }
 
     .Title-Main {
+        font-size: 36px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         margin: 2px;
         padding: 5px;
+
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 72px;
+            }
+          }
+
     }
 
     .Subtitle-Main {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        font-stretch: semi-expanded;
         margin: 2px;
         margin-bottom: 20px;
         padding: 5px;
+
+        @media screen and (min-width: 600px) {
+            div.example {
+              font-size: 40px;
+            }
+          }
+
     }
 
     label {
         font-size: 22px;
-        font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Noto sans', sans-serif;
         font-weight: 200;
         text-shadow: 1px 1px var(--font-shadow-color);
         
@@ -163,7 +175,8 @@
         border-color:      var(--sidebar-fontShadow);
         border-spacing: 3px;
         box-shadow: 2px 4px var(--FrameShadow);
-        animation: ease-out 400ms;
+        animation: gradient ease-out 400ms;
+        
         
     }
 
@@ -174,7 +187,7 @@
         align-content: center;
         text-align: center;
         
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Noto sans', sans-serif;
         font-weight: 800;
 
         margin: 10px;
@@ -198,7 +211,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: 'Noto sans', sans-serif;
         font-size: large;
         font-weight: 600;
         box-shadow: 8px 12px var(--frameShadow);
@@ -222,7 +235,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: 'Noto sans', sans-serif;
         font-size: large;
         font-weight: 600;
         
@@ -270,8 +283,8 @@
             -ms-transform: scale(1.1);
             transform: scale(1.1);
             transition: ease-in-out var(--framedDelay);
-            --framedDelay: 100ms;
-            animation-delay: var(--framedDelay) + 200ms;
+            --framedDelay: 300ms;
+            animation-delay: var(--framedDelay) - 200ms;
             box-shadow: 3px 6px var(--frameShadow);
             
 
@@ -336,20 +349,34 @@
             background: linear-gradient(90deg, var(--sidebar-color), var(--gradientC2), var(--gradientC1),var(--gradientC1));
             animation: gradient 1s ease infinite;
           }
+          ::-moz-scrollbar {
+            width: 16px;
+            background: linear-gradient(90deg, var(--sidebar-color), var(--gradientC2), var(--gradientC1),var(--gradientC1));
+            animation: gradient 1s ease infinite;
+          }
+        
           
           /* Track */
           ::-webkit-scrollbar-track {
             background: var(--sidebar-color);
           }
-          
+          ::-moz-scrollbar-track {
+            background: var(--sidebar-color);
+          }
+
           /* Handle */
           ::-webkit-scrollbar-thumb {
             background: linear-gradient(360deg, var(--sidebar-color), var(--gradientC1), var(--sidebar-color),var(--gradientC1));
             animation: gradient 1s ease infinite;
           }
           
+
+          
           /* Handle on hover */
           ::-webkit-scrollbar-thumb:hover {
+            background: var(--sidebar-fontShadow);
+          }
+          ::-moz-scrollbar-thumb:hover {
             background: var(--sidebar-fontShadow);
           }
         

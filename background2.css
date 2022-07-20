@@ -25,7 +25,7 @@
     opacity: 0.3;
     background: -webkit-linear-gradient(60deg, var(--gradientC1) 0%, var(--gradientC2) 29%,var(--gradientC1), var(--gradientC1) 100%);
     background: linear-gradient(60deg, var(--gradientC1) 0%, var(--gradientC2) 29%,var(--gradientC1), var(--gradientC1) 100%);
-    background-size: 100% 100%;
+    background-size: 400% 400%;
     -webkit-animation: Gradient 45s ease infinite;
   -moz-animation: Gradient 45s ease infinite;
   animation: Gradient 45s ease infinite;
@@ -42,7 +42,7 @@
 
 .coolbg::before, 
 body::after {
-    opacity: 1;
+ opacity: 0.3;
   content: "";
   width: 70vmax;
   height: 70vmax;
@@ -64,7 +64,7 @@ radial-gradient(circle at 93.3% 75%,
   animation: morph 5s linear infinite alternate, spin 60s linear infinite;
   z-index: -1;
   will-change: border-radius, transform;
-  transform-origin: 55% 55%;
+  transform-origin: 300% 200%;
   pointer-events: none;
   overflow: hidden;
 }
@@ -72,8 +72,8 @@ radial-gradient(circle at 93.3% 75%,
     opacity: 0.33;
   }
 body::after {
-    width: 70vmin;
-    height: 70vmin;
+    width:  120vmin;
+    height: 120vmin;
     left: auto;
     right: -10vmin;
     top: auto;
@@ -121,14 +121,14 @@ body::after {
 
 @keyframes morph {
   0% {
-    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+    border-radius: 10% 60% 60% 40% / 70% 30% 70% 30%; }
   100% {
-    border-radius: 40% 60%; } 
+    border-radius: 80% 30%; } 
 }
 
 @keyframes spin {
   to {
-    transform: rotate(1turn); 
+    transform: rotate(0.25turn); 
   } 
 }
   .st0{display:none;}
@@ -150,20 +150,6 @@ body::after {
 
 
   body {
-    background:
-    radial-gradient(circle at 50% 0,
-      var(--gradientC1),
-      var(--gradientC2) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
-      var(--gradientC2),
-      var(--gradientC1) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
-      var(--gradientC1),
-      var(--gradientC2) 70.71%) beige;          
-border-radius: 50%;
-
-background-size: 150% 100%;
-animation: gradient 45s ease infinite;
 margin-right: 200px;
 overflow-x: hidden;
 overflow-y: visible
