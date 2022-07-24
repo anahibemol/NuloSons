@@ -20,7 +20,7 @@
     --darker: hsl(0, 0%, 7%); 
     --black: hsl(0, 0%, 0%);
     font-family: 'Noto sans', sans-serif;
-    
+    --wavebg: url("Resources/SoundwaveW.png");
     }
 
 *{
@@ -30,7 +30,16 @@
 
 
 
-
+.Title-Container {  
+    margin-bottom: 3vh;
+    background-repeat:round;
+    background-position: fixed;
+    background-position-y: 13vh;
+    padding-bottom: 2vh;
+    background-blend-mode:color-dodge;
+    background-image: var(--wavebg);
+    
+}
 
 
 @keyframes gradient {
@@ -144,7 +153,6 @@
         font-size: 20px;
         font-stretch: semi-expanded;
         margin: 2px;
-        margin-bottom: 20px;
         padding: 5px;
 
         @media screen and (min-width: 600px) {
@@ -322,6 +330,7 @@
         --grid-shadow: 2px 1px var(--font-shadow-color);
 
         --frameShadow: var(--font-shadow-color);
+        --wavebg: url("Resources/SoundwaveW.png");
 
 
         
@@ -343,6 +352,7 @@
         --FrameShadow: var(--red-pastel-darker);
 
         --frameShadow: var(--red-pastel-darker);
+        --wavebg: url("Resources/SoundwaveB.png");
     }
 
     

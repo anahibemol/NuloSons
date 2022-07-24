@@ -46,7 +46,6 @@
     .sidebar-text:hover {
         transition: 300ms gradient ease-out;
         animation: 300ms;
-        font-weight: bold;
 
     }   
 
