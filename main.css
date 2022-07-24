@@ -182,19 +182,28 @@
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 50px));
-        grid-auto-rows: max-content;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 9vw));
+        grid-template-rows: repeat(66px);
+        justify-self: center;
         align-content: center;
         text-align: center;
         
         font-family: 'Noto sans', sans-serif;
         font-weight: 800;
-
+        
         margin: 10px;
         border-color: var(--btnBorder);
+        
 
     }
-        
+
+    @media screen and (max-width: 600px) {
+        .grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 120px));
+            grid-template-rows: repeat(66px);
+        }
+      }    
+
     .hr-1{
         color: var(--sidebar-color);
         border-top: 3px solid var(--sidebar-color);

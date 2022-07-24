@@ -21,8 +21,8 @@
     }
 
 .sidebar {
-    height: 12000px;
-    width: 240px;
+    height: 100vh;
+    width: 20vw;
     position: fixed;
     top: 0;
     right: 0;
@@ -40,12 +40,20 @@
     
     .sidebar-text {
         color: var(--sidebar-fontColor);
+
     }
+
+    .sidebar-text:hover {
+        transition: 300ms gradient ease-out;
+        animation: 300ms;
+        font-weight: bold;
+
+    }   
 
     .sidebar div {
     padding: 10px;
     font-size: 24px;
-    line-height: 60px;
+    line-height: 80px;
     display: block;
     }
     
@@ -62,7 +70,7 @@
         gap: 20px ;
         
         
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
     
     }
 
