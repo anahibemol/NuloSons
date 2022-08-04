@@ -61,14 +61,14 @@
         font-size:16px;
         font-family: 'Noto sans', sans-serif;
         font-weight: 400;
-    
-        @media screen and (min-width: 600px) {
-            div.example {
-              font-size: 32px;
-            }
-          }
 
     }
+
+    @media screen and (max-width: 600px) {
+        ul {
+          font-size: 32px;
+        }
+      }
 
     body {
         scrollbar-color: var(--gradientC1);
