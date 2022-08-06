@@ -1,0 +1,130 @@
+:root {
+    --gradientC1: rgba(64, 32, 128, 60%);
+    --gradientC2: rgba(64, 17, 32, 60%);
+    --gradientC3: hsla(19, 58%, 16%, 0.6);
+    --gradientC4: rgba(196, 17, 32, 60%);
+
+
+    --gradientFX1: repeating-linear-gradient(to bottom, rgba(32, 32, 32, 90%), rgba(17, 17, 25, 90%)),
+    radial-gradient(circle at 50% 0,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+   var(--gradientC2),
+   var(--gradientC1) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%) beige;
+
+    --gradientFX2: repeating-linear-gradient(to bottom, rgba(245, 222, 179, 90%), rgba(225, 182, 159, 90%)),
+    radial-gradient(circle at 50% 0,
+   var(--gradientC3),
+   var(--gradientC4) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+   var(--gradientC4),
+   var(--gradientC3) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+   var(--gradientC3),
+   var(--gradientC4) 70.71%) beige;
+}
+
+.wrapper {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    color: rgb(32, 32, 32);
+
+    margin: 2vh 2vw;
+    padding: 1%;
+    }
+.fun {
+
+    box-shadow: 1vh 1vw rgb(12, 12, 12);
+ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px rgba(64, 64, 64, 30%);
+    width: fit-content;
+    height: fit-content;
+    min-width: 8em;
+    background: var(--gradientFX2);
+    background-size: 150% 150%;    
+    margin: 4vh;
+    margin-left: 10px;
+    margin-right: -5em; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center center;
+    border-width: 0.5vw;
+    border-style: inset;
+    border-top: 0;
+    border-bottom: 0;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        rgba(12, 12, 12, 30%), 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;
+    animation: infinite 3s borderlines cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.fun:hover{
+     top: 100px;
+     animation-delay: 100ms;
+     animation: glowing forwards 200ms ease-in-out;
+     top: 20%;
+    
+}
+@keyframes borderlines {
+    0% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgba(12, 12, 16, 30%), 
+          rgba(0, 0, 0, 0)
+        ) 1 100%;
+    }
+    25% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgba(12, 12, 16, 20%), 
+          rgba(12, 12, 24, 50%)
+        ) 1 100%;
+    }
+    50% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgba(12, 12, 64, 10%), 
+          rgba(12, 12, 32, 70%)
+        ) 1 100%;
+    }
+    75% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgba(12, 12, 16, 20%), 
+          rgba(12, 12, 24, 50%)
+        ) 1 100%;
+    }
+    100% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgba(12, 12, 16, 30%), 
+          rgba(12, 12, 12, 00%)
+        ) 1 100%;
+    }
+}
+@keyframes glowing {
+    0%   {margin-left: 10px;}
+    12%  {margin-left: 15px;}
+    25%  {margin-left: 20px;}
+    37%  {margin-left: 25px;}
+    50%  {margin-left: 35px;}
+    62%  {margin-left: 45px;}
+    75%  {margin-left: 50px;}
+    87%  {margin-left: 40px;}
+   100%  {margin-left: 30px;}
+    
+}

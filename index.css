@@ -1,21 +1,56 @@
+@import url(buttons.css);
 :root {
     --gradientC1: rgba(64, 32, 128, 60%);
     --gradientC2: rgba(64, 17, 32, 60%);
+    --gradientC3: hsla(19, 58%, 16%, 0.6);
+    --gradientC4: rgba(196, 17, 32, 60%);
+
+
+    --gradientFX1: repeating-linear-gradient(to bottom, rgba(32, 32, 32, 90%), rgba(17, 17, 25, 90%)),
+    radial-gradient(circle at 50% 0,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+   var(--gradientC2),
+   var(--gradientC1) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%) beige;
+
+    --gradientFX2: repeating-linear-gradient(to bottom, rgba(245, 222, 179, 90%), rgba(225, 182, 159, 90%)),
+    radial-gradient(circle at 50% 0,
+   var(--gradientC3),
+   var(--gradientC4) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+   var(--gradientC4),
+   var(--gradientC3) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+   var(--gradientC3),
+   var(--gradientC4) 70.71%) beige;
+}
+.header {
+    position: fixed;
+    width: 100vw;
+    background: var(--gradientFX2);
+
+    background-size: 150% 100%;
+    animation: gradient 45s ease infinite;
+    margin-right: 200px;
+
+    color:black;
+    
+}
+
+
+hr {
+    color: wheat;
+    width: 100vw;
 }
 html {
     height: 100%;
   }
   .combined-gradient1 {
-    background: repeating-linear-gradient(to bottom, rgba(32, 32, 32, 90%), rgba(17, 17, 25, 90%)),
-     radial-gradient(circle at 50% 0,
-    var(--gradientC1),
-    var(--gradientC2) 70.71%),
-     radial-gradient(circle at 6.7% 75%,
-    var(--gradientC2),
-    var(--gradientC1) 70.71%),
-     radial-gradient(circle at 93.3% 75%,
-    var(--gradientC1),
-    var(--gradientC2) 70.71%) beige;
+    background: var(--gradientFX1);
 
     background-size: 150% 100%;
     animation: gradient 45s ease infinite;
@@ -32,51 +67,6 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-nav {    
-    text-align: center;
-    color: rgb(32, 32, 32);
-    background: hsl(39, 77%, 83%);
-    margin: 2vh 2vw;
-    padding: 1%;
-    display:table;
-    box-shadow: 1vh 1vw rgb(24, 24, 24);
-}
-
-.fun {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px rgba(64, 64, 64, 30%);
-    height: fit-content;
-    margin-left: 10px;
-    min-width: 6em;
-    margin: 2em;
-    border-width: 0.5vw;
-    border-style: inset;
-    border-image: 
-      linear-gradient(
-        to bottom, 
-        rgba(64, 64, 64, 30%), 
-        rgba(0, 0, 0, 0)
-      ) 1 100%;
-    transition:0s 180s;
-}
-
-.fun:hover{
-
-     animation-delay: 300ms;
-     animation: glowing forwards 500ms ease-in-out;
-     top: 20%;
-    
-}
-
-@keyframes glowing {
-    0%   {margin-left: 10px; background-color: hsl(39, 77%, 63%);}
-    25%  {margin-left: 15px; background-color: hsl(39, 77%, 63%);}
-    50%  {margin-left: 20px; background-color: hsl(39, 77%, 68%);}
-    75%  {margin-left: 25px; background-color: hsl(39, 77%, 78%);}
-    100% {margin-left: 35px; background-color: hsl(39, 77%, 83%);}
-    
 }
 
 body.bg {
