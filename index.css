@@ -27,6 +27,8 @@
     radial-gradient(circle at 93.3% 75%,
    var(--gradientC3),
    var(--gradientC4) 70.71%) beige;
+
+   background: var(--gradientFX1);
 }
 .header {
     position: fixed;
@@ -39,19 +41,27 @@
 
     color:black;
     
+    
 }
 
+.header>p {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.header>h1 {
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 hr {
     color: wheat;
     width: 100vw;
+    border: 2px 2px black;
 }
 html {
     height: 100%;
   }
   .combined-gradient1 {
-    background: var(--gradientFX1);
-
     background-size: 150% 100%;
     animation: gradient 45s ease infinite;
     margin-right: 200px;
@@ -69,10 +79,6 @@ a {
     text-decoration: none;
 }
 
-body.bg {
-    background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(17, 17, 25));
-    opacity: 50%;      
-}
 @keyframes gradient {
     0% {
         background-position: 0% 50%;

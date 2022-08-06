@@ -35,9 +35,7 @@
     
         background-size: 150% 100%;
         animation: gradient 45s ease infinite;
-        margin-right: 200px;
-        
-        
+        margin-right: 200px;    
     }
 
     .light-theme {
