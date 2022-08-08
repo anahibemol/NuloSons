@@ -70,7 +70,7 @@
 .fun:hover{
      top: 100px;
      animation-delay: 100ms;
-     animation: glowing forwards 200ms ease-in-out;
+     animation: movingson infinite 1000ms ease-in-out;
      top: 20%;
     
 }
@@ -116,15 +116,29 @@
         ) 1 100%;
     }
 }
-@keyframes glowing {
-    0%   {margin-left: 10px;}
-    12%  {margin-left: 15px;}
-    25%  {margin-left: 20px;}
-    37%  {margin-left: 25px;}
-    50%  {margin-left: 35px;}
-    62%  {margin-left: 45px;}
-    75%  {margin-left: 50px;}
-    87%  {margin-left: 40px;}
-   100%  {margin-left: 30px;}
+@keyframes movingson {
+    0%   {margin-left: 5px;  padding-right:calc(0.3* 5vh );}
+    12%  {margin-left: 10px; padding-right:calc(0.3* 10vh);}
+    25%  {margin-left: 15px; padding-right:calc(0.3* 15vh);}
+    37%  {margin-left: 5px;  padding-right:calc(0.3* 5vh );}
+    50%  {margin-left: 0px ; padding-right:calc(0.3* 0vh );}
+    62%  {margin-left:-10px; padding-left: calc(0.3*  10vh);}
+    75%  {margin-left:-15px; padding-left: calc(0.3*  15vh);}
+    87%  {margin-left:-10px; padding-left: calc(0.3*  10vh);}
+   100%  {margin-left: 5px;  padding-right:calc(0.3* 5vh );}
     
+}
+
+.rightside {
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 200px;
+    left: 90vw;
+}
+
+.links {
+    margin-top: 20px;
+    font-size: large;
 }

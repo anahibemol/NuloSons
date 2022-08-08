@@ -325,11 +325,11 @@
         
 
         --framedBorder: 3px outset var(--white);
-        --FrameShadow: var(--red-pastel);
-        --font-shadow-color: var(--red-pastel);
-        --grid-shadow: 2px 1px var(--font-shadow-color);
+        --FrameShadow: hsla(341, 39%, 32%, 0.8);
+        --font-shadow-color: hsla(341, 39%, 32%, 0.8);
+        --grid-shadow: 2px 1px hsla(341, 39%, 32%, 0.8);
 
-        --frameShadow: var(--font-shadow-color);
+        --frameShadow: hsla(341, 39%, 32%, 0.8);
         --wavebg: url("Resources/SoundwaveW.png");
 
 
@@ -347,11 +347,11 @@
         
         
         --framedBorder: 3px outset var(--light);
-        --font-shadow-color: var(--sidebar-color);
-        --grid-shadow: 3px 2px var(--font-shadow-color);
-        --FrameShadow: var(--red-pastel-darker);
+        --font-shadow-color: hsla(260, 60%, 16%, 0.8);
+        --grid-shadow: 3px 2px hsla(260, 60%, 16%, 0.8);
+        --FrameShadow: hsla(260, 60%, 16%, 0.8);
 
-        --frameShadow: var(--red-pastel-darker);
+        --frameShadow: hsla(260, 60%, 16%, 0.8);
         --wavebg: url("Resources/SoundwaveB.png");
     }
 

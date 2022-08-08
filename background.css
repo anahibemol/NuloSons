@@ -39,12 +39,12 @@
     }
 
     .light-theme {
-        --gradientC1: var(--red-pastel);
-        --gradientC2: var(--red-pastel-light);
+        --gradientC1: hsla(260, 40%, 47%, 0.8);
+        --gradientC2: hsla(341, 39%, 32%, 0.8);
         
     }
     .dark-theme {
-        --gradientC1: var(--red-pastel-dark);
-        --gradientC2: var(--red-pastel-darker);
+        --gradientC1: hsla(260, 60%, 16%, 0.8);
+        --gradientC2: hsla(341, 58%, 8%, 0.8);
 
     }

@@ -53,7 +53,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-hr {
+.hr {
     color: wheat;
     width: 100vw;
     border: 2px 2px black;
@@ -91,5 +91,11 @@ a {
     }
 }
 
-
+.about{
+    overflow: hidden;
+    display:contents;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    text-align: center;
+}
   
