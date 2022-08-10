@@ -1,34 +1,12 @@
 @import url(buttons.css);
+@import url(background.css);
 :root {
     --gradientC1: rgba(64, 32, 128, 60%);
     --gradientC2: rgba(64, 17, 32, 60%);
     --gradientC3: hsla(19, 58%, 16%, 0.6);
     --gradientC4: rgba(196, 17, 32, 60%);
 
-
-    --gradientFX1: repeating-linear-gradient(to bottom, rgba(32, 32, 32, 90%), rgba(17, 17, 25, 90%)),
-    radial-gradient(circle at 50% 0,
-   var(--gradientC1),
-   var(--gradientC2) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
-   var(--gradientC2),
-   var(--gradientC1) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
-   var(--gradientC1),
-   var(--gradientC2) 70.71%) beige;
-
-    --gradientFX2: repeating-linear-gradient(to bottom, rgba(245, 222, 179, 90%), rgba(225, 182, 159, 90%)),
-    radial-gradient(circle at 50% 0,
-   var(--gradientC3),
-   var(--gradientC4) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
-   var(--gradientC4),
-   var(--gradientC3) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
-   var(--gradientC3),
-   var(--gradientC4) 70.71%) beige;
-
-   background: var(--gradientFX1);
+   
 }
 .header {
     position: fixed;
@@ -61,11 +39,7 @@
 html {
     height: 100%;
   }
-  .combined-gradient1 {
-    background-size: 150% 100%;
-    animation: gradient 45s ease infinite;
-    margin-right: 200px;
-  }
+
 
 body {
     color:wheat;
@@ -79,23 +53,12 @@ a {
     text-decoration: none;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.Ltex {
+    margin-left: 2vw;
+    margin-right: 16vw;
 }
 
-.about{
-    overflow: hidden;
-    display:contents;
-    margin-right: 10vw;
-    margin-left: 10vw;
-    text-align: center;
+.no-overflow {
+    overflow-y:scroll;
 }
   

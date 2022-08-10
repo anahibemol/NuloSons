@@ -1,42 +1,37 @@
-:root{
-    --grey: hsl(0, 0%, 43%);
-    --greyer: hsl(0, 0%, 31%);
+:root {
+    --gradientFX1: repeating-linear-gradient(to bottom, rgba(54, 54, 54, 90%), rgba(17, 17, 25, 90%)),
+    radial-gradient(circle at 50% 0,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+   var(--gradientC2),
+   var(--gradientC1) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%) beige;
+    background: var(--gradientFX1);
+}
 
-    --red-dark: hsl(2, 98%, 25%);
-    --red-normal: hsl(2, 98%, 36%);
-    --red-pastel: hsl(2, 54%, 64%);
-    --red-pastel-ulight: hsl(2, 100%, 95%);
-    --red-pastel-light: hsl(2, 54%, 80%);
-    --red-pastel-dark: hsl(2, 54%, 40%);
-    --red-pastel-darker: hsl(2, 54%, 20%);
+body {
+    --gradientFX1: repeating-linear-gradient(to bottom, rgba(54, 54, 54, 90%), rgba(17, 17, 25, 90%)),
+    radial-gradient(circle at 50% 0,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+   var(--gradientC2),
+   var(--gradientC1) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+   var(--gradientC1),
+   var(--gradientC2) 70.71%) beige;
 
-    --light: hsl(0, 0%, 85%);
-    --white: hsl(0, 0%, 100%);
+   
+}
 
-    --dark: hsl(0, 0%, 17%); 
-    --darker: hsl(0, 0%, 7%); 
-    --black: hsl(0, 0%, 0%);
-    
-    }
-
-    body {
-        margin: 4px;
-        background:
-            radial-gradient(circle at 50% 0,
-              var(--gradientC1),
-              var(--gradientC2) 70.71%),
-            radial-gradient(circle at 6.7% 75%,
-              var(--gradientC2),
-              var(--gradientC1) 70.71%),
-            radial-gradient(circle at 93.3% 75%,
-              var(--gradientC1),
-              var(--gradientC2) 70.71%) beige;          
-        border-radius: 50%;
-    
-        background-size: 150% 100%;
-        animation: gradient 45s ease infinite;
-        margin-right: 200px;    
-    }
+.combined-gradient1 {
+    background-size: 150% 100%;
+    animation: gradient 45s ease infinite;
+    margin-right: 200px;
+  }
 
     .light-theme {
         --gradientC1: hsla(260, 40%, 47%, 0.8);
@@ -47,4 +42,16 @@
         --gradientC1: hsla(260, 60%, 16%, 0.8);
         --gradientC2: hsla(341, 58%, 8%, 0.8);
 
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }

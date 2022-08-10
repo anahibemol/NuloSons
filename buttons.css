@@ -1,31 +1,12 @@
+@import url(background.css);
 :root {
     --gradientC1: rgba(64, 32, 128, 60%);
     --gradientC2: rgba(64, 17, 32, 60%);
     --gradientC3: hsla(19, 58%, 16%, 0.6);
     --gradientC4: rgba(196, 17, 32, 60%);
 
+    --gradientFX2: repeating-linear-gradient(to bottom, rgba(245, 222, 179, 90%), rgba(225, 182, 159, 90%));
 
-    --gradientFX1: repeating-linear-gradient(to bottom, rgba(32, 32, 32, 90%), rgba(17, 17, 25, 90%)),
-    radial-gradient(circle at 50% 0,
-   var(--gradientC1),
-   var(--gradientC2) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
-   var(--gradientC2),
-   var(--gradientC1) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
-   var(--gradientC1),
-   var(--gradientC2) 70.71%) beige;
-
-    --gradientFX2: repeating-linear-gradient(to bottom, rgba(245, 222, 179, 90%), rgba(225, 182, 159, 90%)),
-    radial-gradient(circle at 50% 0,
-   var(--gradientC3),
-   var(--gradientC4) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
-   var(--gradientC4),
-   var(--gradientC3) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
-   var(--gradientC3),
-   var(--gradientC4) 70.71%) beige;
 }
 
 .wrapper {
@@ -69,11 +50,13 @@
 
 .fun:hover{
      top: 100px;
-     animation-delay: 100ms;
-     animation: movingson infinite 1000ms ease-in-out;
+     transform: scale(1.1);
+     font-size: 100%; 
+     animation: growing 200ms forwards cubic-bezier(0.68, -0.55, 0.265, 1.55);
      top: 20%;
     
 }
+
 @keyframes borderlines {
     0% {
         border-image: 
@@ -129,6 +112,15 @@
     
 }
 
+@keyframes growing {
+    0%   {transform: scale(1.0);  font-size: 100%;--gradientC1: var(--gradientC3);}
+    25%  {transform: scale(1.05); font-size: 100%;--gradientC1: var(--gradientC3);}
+    50%  {transform: scale(1.1);  font-size: 101%;--gradientC1: var(--gradientC3);}
+    75%  {transform: scale(1.15); font-size: 102%;--gradientC1: var(--gradientC3);}
+    87%  {transform: scale(1.1);  font-size: 103%;--gradientC1: var(--gradientC3);}
+   100%  {transform: scale(1.1);  font-size: 105%;--gradientC1: var(--gradientC3);}
+    
+}
 .rightside {
     text-align: right;
     margin-right: 20px;
