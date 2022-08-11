@@ -9,11 +9,11 @@
     radial-gradient(circle at 93.3% 75%,
    var(--gradientC1),
    var(--gradientC2) 70.71%) beige;
-    background: var(--gradientFX1);
+    
 }
 
 body {
-    --gradientFX1: repeating-linear-gradient(to bottom, rgba(54, 54, 54, 90%), rgba(17, 17, 25, 90%)),
+    --gradientFX1: repeating-linear-gradient(to bottom, hsla(260, 30%, 16%, 0.8), hsla(355, 24%, 21%, 0.8)),
     radial-gradient(circle at 50% 0,
    var(--gradientC1),
    var(--gradientC2) 70.71%),
@@ -24,7 +24,7 @@ body {
    var(--gradientC1),
    var(--gradientC2) 70.71%) beige;
 
-   
+   background: var(--gradientFX1);
 }
 
 .combined-gradient1 {
@@ -34,8 +34,8 @@ body {
   }
 
     .light-theme {
-        --gradientC1: hsla(260, 40%, 47%, 0.8);
-        --gradientC2: hsla(341, 39%, 32%, 0.8);
+        --gradientC1: hsla(0, 0%, 0%, 0.8);
+        --gradientC2: hsla(0, 0%, 100%, 0.2);
         
     }
     .dark-theme {

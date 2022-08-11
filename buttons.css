@@ -20,7 +20,7 @@
     }
 .fun {
 
-    box-shadow: 1vh 1vw rgb(12, 12, 12);
+    box-shadow: 1vh 1vw rgba(12, 12, 12, 0.33);
  
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 2px 2px rgba(64, 64, 64, 30%);
@@ -39,13 +39,7 @@
     border-style: inset;
     border-top: 0;
     border-bottom: 0;
-    border-image: 
-      linear-gradient(
-        to bottom, 
-        rgba(12, 12, 12, 30%), 
-        rgba(0, 0, 0, 0)
-      ) 1 100%;
-    animation: infinite 3s borderlines cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    border-color: hsla(271, 76%, 53%, 20%);
 }
 
 .fun:hover{
@@ -57,48 +51,6 @@
     
 }
 
-@keyframes borderlines {
-    0% {
-        border-image: 
-        linear-gradient(
-          to bottom, 
-          rgba(12, 12, 16, 30%), 
-          rgba(0, 0, 0, 0)
-        ) 1 100%;
-    }
-    25% {
-        border-image: 
-        linear-gradient(
-          to bottom, 
-          rgba(12, 12, 16, 20%), 
-          rgba(12, 12, 24, 50%)
-        ) 1 100%;
-    }
-    50% {
-        border-image: 
-        linear-gradient(
-          to bottom, 
-          rgba(12, 12, 64, 10%), 
-          rgba(12, 12, 32, 70%)
-        ) 1 100%;
-    }
-    75% {
-        border-image: 
-        linear-gradient(
-          to bottom, 
-          rgba(12, 12, 16, 20%), 
-          rgba(12, 12, 24, 50%)
-        ) 1 100%;
-    }
-    100% {
-        border-image: 
-        linear-gradient(
-          to bottom, 
-          rgba(12, 12, 16, 30%), 
-          rgba(12, 12, 12, 00%)
-        ) 1 100%;
-    }
-}
 @keyframes movingson {
     0%   {margin-left: 5px;  padding-right:calc(0.3* 5vh );}
     12%  {margin-left: 10px; padding-right:calc(0.3* 10vh);}

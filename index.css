@@ -31,10 +31,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.hr {
+.hrHead {
+    position: relative;
+    top: 7.6em;
     color: wheat;
     width: 100vw;
-    border: 2px 2px black;
+    border-top: 5px solid hsla(0, 0%, 0%, 10%);
+    border-bottom: 3px solid hsla(0, 0%, 0%, 50%);
 }
 html {
     height: 100%;
