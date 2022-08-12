@@ -13,7 +13,7 @@
 }
 
 body {
-    --gradientFX1: repeating-linear-gradient(to bottom, hsla(260, 30%, 16%, 0.8), hsla(355, 24%, 21%, 0.8)),
+    --gradientFX1: linear-gradient(to bottom, hsla(260, 30%, 16%, 0.8), hsla(355, 24%, 21%, 0.8)),
     radial-gradient(circle at 50% 0,
    var(--gradientC1),
    var(--gradientC2) 70.71%),
@@ -23,12 +23,13 @@ body {
     radial-gradient(circle at 93.3% 75%,
    var(--gradientC1),
    var(--gradientC2) 70.71%) beige;
-
+    min-height: 100%;
    background: var(--gradientFX1);
+   background-size: cover;
 }
 
 .combined-gradient1 {
-    background-size: 150% 100%;
+    background-size: cover;
     animation: gradient 45s ease infinite;
     margin-right: 200px;
   }
@@ -46,12 +47,12 @@ body {
 
     @keyframes gradient {
         0% {
-            background-position: 0% 50%;
+            background-position: 100% 50%;
         }
         50% {
             background-position: 100% 50%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 100% 50%;
         }
     }

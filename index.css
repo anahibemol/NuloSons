@@ -9,13 +9,13 @@
    
 }
 .header {
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100vw;
     background: var(--gradientFX2);
 
     background-size: 150% 100%;
     animation: gradient 45s ease infinite;
-    margin-right: 200px;
 
     color:black;
     
@@ -62,7 +62,7 @@ a {
 
  
 
-.about {
-    margin-top: 7.6em;
+.text{
+    top: 7.6em;
     
 }
