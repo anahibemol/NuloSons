@@ -48,7 +48,6 @@ body {
     color:wheat;
     height: 100%;
     margin: 0;
-    overflow: hidden; 
 }
 
 a {
@@ -61,7 +60,9 @@ a {
     margin-right: 16vw;
 }
 
-.no-overflow {
-    overflow-y:scroll;
+ 
+
+.about {
+    margin-top: 7.6em;
+    
 }
-  
