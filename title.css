@@ -1,0 +1,15 @@
+@import url(index.css);
+
+body {
+    --angle: 40deg;
+    background-image: linear-gradient(var(--angle), hsla(260, 60%, 16%, 0.9), hsla(341, 58%, 8%, 0.9));
+    background-repeat: round;
+    animation: gradient 1s infinite ease-out;
+    min-height: 100%;
+    min-width: 100%;
+
+}
+
+.hrHead {
+    top: 10em !important;
+}
