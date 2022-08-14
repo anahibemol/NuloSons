@@ -9,7 +9,7 @@
    
 }
 .header {
-    position: sticky;
+    position: relative;
     top: 0px;
     width: 100vw;
     background: var(--gradientFX2);
@@ -24,6 +24,7 @@
 
 .header>p {
     padding-top: 15px;
+    padding-bottom: 40px;
     padding-left: 10px;
 }
 .header>h1 {
@@ -33,7 +34,7 @@
 
 .hrHead {
     position: relative;
-    top: 7.6em;
+    top: 9.48em;
     color: wheat;
     width: 100vw;
     border-top: 5px solid hsla(0, 0%, 0%, 10%);
@@ -60,9 +61,8 @@ a {
     margin-right: 16vw;
 }
 
- 
-
 .text{
-    top: 7.6em;
+    position: absolute;
+    margin-top: 9em;
     
 }
